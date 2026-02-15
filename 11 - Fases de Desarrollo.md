@@ -14,7 +14,7 @@ status: in-progress
 | **0** | Setup e infraestructura | COMPLETADA |
 | **1** | Auth + Catalogo | COMPLETADA |
 | **2** | Carrito + Checkout + Pagos | EN PROGRESO |
-| **3** | Pedidos + Tracking + Push | Pendiente |
+| **3** | Pedidos + Tracking + Push | EN PROGRESO |
 | **4** | Sucursales + Perfil | Pendiente |
 | **5** | QA + Deploy | Pendiente |
 
@@ -98,19 +98,19 @@ Flujo de compra completo end-to-end.
 
 ---
 
-## Fase 3 — Pedidos + Tracking + Notificaciones Push — PENDIENTE
+## Fase 3 — Pedidos + Tracking + Notificaciones Push — EN PROGRESO
 
 ### Objetivo
 Post-compra: ver pedidos, tracking, y recibir notificaciones.
 
-### Backend
-- [ ] Endpoints de ordenes (list, detail)
-- [ ] Endpoint de tracking (timeline de estados)
-- [ ] Servicio de push notifications (Firebase)
-- [ ] Enviar push en cada cambio de estado
-- [ ] Registro de FCM tokens
-- [ ] Tabla de notificaciones (historial)
-- [ ] Mecanismo para actualizar estados (desde Odoo o panel)
+### Backend — COMPLETADO
+- [x] Endpoints de ordenes (list, detail) — hecho en Fase 2
+- [x] Endpoint de tracking (timeline de estados) — incluido en order detail
+- [x] Servicio de push notifications (Firebase Admin SDK, graceful fallback)
+- [x] Enviar push en cada cambio de estado
+- [x] Registro de FCM tokens (POST/DELETE /api/push-tokens)
+- [x] Historial de notificaciones (GET, mark read, mark all read)
+- [x] Mecanismo para actualizar estados (POST /api/admin/orders/:id/status con validacion de transiciones)
 
 ### Flutter
 - [ ] Pantalla "Mis Pedidos" (tabs por estado)
