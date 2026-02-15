@@ -15,7 +15,7 @@ status: in-progress
 | **1** | Auth + Catalogo | COMPLETADA |
 | **2** | Carrito + Checkout + Pagos | EN PROGRESO |
 | **3** | Pedidos + Tracking + Push | EN PROGRESO |
-| **4** | Sucursales + Perfil | Pendiente |
+| **4** | Sucursales + Perfil | EN PROGRESO (Backend completado) |
 | **5** | QA + Deploy | Pendiente |
 
 ---
@@ -122,14 +122,14 @@ Post-compra: ver pedidos, tracking, y recibir notificaciones.
 
 ---
 
-## Fase 4 — Sucursales + Perfil — PENDIENTE
+## Fase 4 — Sucursales + Perfil — EN PROGRESO
 
 ### Objetivo
 Completar la experiencia con mapa de sucursales y gestion de perfil.
 
-### Backend
-- [ ] Endpoints de sucursales (list con distancia, detail)
-- [ ] Endpoints de direcciones (CRUD)
+### Backend — COMPLETADO
+- [x] Endpoints de sucursales (list con distancia, detail)
+- [x] Endpoints de direcciones (CRUD)
 
 ### Flutter
 - [ ] Mapa de sucursales (Google Maps)
