@@ -1,58 +1,67 @@
 ---
 tags: [blackdog-app, index]
 created: 2026-02-15
-status: planning
+updated: 2026-02-15
+status: in-progress
 ---
 
-# BlackDog App - Documentación del Proyecto
+# BlackDog App - Documentacion del Proyecto
 
 ## Resumen Ejecutivo
 
-BlackDog App es una **aplicación móvil de e-commerce** (iOS y Android) para la cadena de pet shops **Black Dog Panamá**. Permite a los clientes comprar productos para mascotas, elegir entre delivery o pick-up en sucursal, y dar seguimiento a sus pedidos.
+BlackDog App es una **aplicacion movil de e-commerce** (iOS y Android) para la cadena de pet shops **Black Dog Panama**. Permite a los clientes comprar productos para mascotas, elegir entre delivery o pick-up en sucursal, y dar seguimiento a sus pedidos.
 
 ## Documentos
 
-### Arquitectura y Técnico
-- [[01 - Visión General y Arquitectura]]
-- [[02 - Stack Tecnológico]]
-- [[03 - Diseño del Backend API]]
-- [[04 - Integración con Odoo]]
-- [[05 - Sincronización Odoo-Supabase]]
+### Arquitectura y Tecnico
+- [[01 - Vision General y Arquitectura]]
+- [[02 - Stack Tecnologico]]
+- [[03 - Diseno del Backend API]]
+- [[04 - Integracion con Odoo]]
+- [[05 - Sincronizacion Odoo-Supabase]]
 - [[06 - Sistema de Pagos]]
 - [[07 - Sistema de Delivery]]
 - [[08 - Notificaciones Push]]
 
 ### Producto
 - [[09 - Pantallas y Flujo de Usuario]]
-- [[10 - Sistema de Diseño (Brand Guide)]]
+- [[10 - Sistema de Diseno (Brand Guide)]]
 - [[11 - Fases de Desarrollo]]
 
 ### Infraestructura
 - [[12 - Hosting e Infraestructura]]
+- [[13 - Estado Actual del Proyecto]]
 
 ---
 
 ## Datos Clave
 
-| Aspecto | Decisión |
+| Aspecto | Decision |
 |---------|----------|
-| **Plataforma** | Flutter (iOS + Android) |
-| **Backend** | Express.js + TypeScript |
-| **Base de datos** | Supabase (cache) + Odoo (fuente de verdad) |
+| **Plataforma** | Flutter 3.41.1 (iOS + Android) |
+| **Backend** | Express.js + TypeScript (puerto 3002) |
+| **Base de datos** | Supabase (cache) + Odoo 18 (fuente de verdad) |
 | **Auth** | Supabase Auth (email + Google + Apple) |
 | **Pagos** | Tilopay + Yappy + Pago en tienda |
 | **Entrega** | Delivery propio + Pick-up en sucursal |
-| **Hosting** | VPS actual de PeopleBD (temporal) |
-| **Diseño** | Basado en prototipo Stitch |
+| **Hosting** | VPS actual de PeopleBD |
+| **Diseno** | Basado en prototipo Stitch |
+
+## Repositorios
+
+| Repo | URL |
+|------|-----|
+| Flutter App | https://github.com/darauz-blackdog/blackdog-app |
+| Backend API | https://github.com/darauz-blackdog/blackdog-api |
+| Documentacion | https://github.com/darauz-blackdog/Obisdian-BlackdogAPP |
 
 ## Estado del Proyecto
 
-- [x] Investigación y prototipo en Stitch
-- [x] Definición de stack y arquitectura
-- [ ] Setup de repositorios
-- [ ] Fase 0: Infraestructura
-- [ ] Fase 1: Auth + Catálogo
-- [ ] Fase 2: Carrito + Checkout + Pagos
-- [ ] Fase 3: Pedidos + Tracking + Notificaciones
-- [ ] Fase 4: Sucursales + Perfil
-- [ ] Fase 5: QA + Deploy a Stores
+- [x] Investigacion y prototipo en Stitch
+- [x] Definicion de stack y arquitectura
+- [x] **Fase 0**: Infraestructura (backend, Supabase, sync Odoo, systemd)
+- [x] **Fase 1**: Auth + Catalogo (backend endpoints + Flutter screens)
+- [ ] **Fase 2**: Carrito + Checkout + Pagos
+- [ ] **Fase 3**: Pedidos + Tracking + Notificaciones
+- [ ] **Fase 4**: Sucursales + Perfil completo
+- [ ] **Fase 5**: QA + Deploy a Stores
