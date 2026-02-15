@@ -11,7 +11,7 @@ status: in-progress
 
 ## Resumen
 
-Fase 0 y Fase 1 completadas. El backend API esta corriendo en produccion (puerto 3002) con sync de Odoo funcionando. La app Flutter tiene la estructura completa con pantallas de auth y catalogo.
+Fase 0 y Fase 1 completadas. Fase 2 backend en progreso (carrito + ordenes listos, pagos pendientes). El backend API esta corriendo en produccion (puerto 3002) con sync de Odoo funcionando. La app Flutter tiene la estructura completa con pantallas de auth y catalogo.
 
 ---
 
@@ -89,18 +89,25 @@ Fase 0 y Fase 1 completadas. El backend API esta corriendo en produccion (puerto
 
 ---
 
-## Siguiente: Fase 2 — Carrito + Checkout + Pagos
+## Fase 2 — Carrito + Checkout + Pagos — EN PROGRESO
 
-### Backend (por hacer)
-- [ ] `GET /api/cart` — Carrito activo del usuario
-- [ ] `POST /api/cart/items` — Agregar item (validar stock)
-- [ ] `PUT /api/cart/items/:id` — Actualizar cantidad
-- [ ] `DELETE /api/cart/items/:id` — Eliminar item
-- [ ] `POST /api/orders` — Crear orden (validar stock, crear sale.order en Odoo)
+### Backend — Carrito y Ordenes (COMPLETADO)
+- [x] `GET /api/cart` — Carrito activo del usuario (get-or-create, items + subtotal)
+- [x] `POST /api/cart/items` — Agregar item (valida producto publicado + stock agregado)
+- [x] `PUT /api/cart/items/:id` — Actualizar cantidad (valida ownership via cart join + stock)
+- [x] `DELETE /api/cart/items/:id` — Eliminar item (valida ownership)
+- [x] `DELETE /api/cart` — Limpiar carrito completo
+- [x] `POST /api/orders` — Crear orden (valida stock en sucursal, crea sale.order en Odoo, tracking, convierte carrito)
+- [x] `GET /api/orders` — Lista paginada con filtro por status
+- [x] `GET /api/orders/:id` — Detalle con items + tracking timeline + branch info
+- [x] `POST /api/orders/:id/cancel` — Cancelar orden (valida status, cancela en Odoo)
+- [x] Logica pago en tienda (orden status=confirmed directamente)
+- [x] Delivery fee basico ($3.50 para delivery, $0 para pickup)
+
+### Backend — Pagos (pendiente)
 - [ ] Integracion Tilopay (crear payment link, webhook)
 - [ ] Integracion Yappy (crear solicitud, webhook)
-- [ ] Logica pago en tienda (orden draft)
-- [ ] Calculo delivery fee por zona
+- [ ] Calculo de delivery fee por zona (actualmente flat $3.50)
 
 ### Flutter (por hacer)
 - [ ] Provider de carrito (add, remove, update quantity, clear)
@@ -150,6 +157,8 @@ Fase 0 y Fase 1 completadas. El backend API esta corriendo en produccion (puerto
 | `src/middleware/auth.ts` | JWT verification via Supabase |
 | `src/routes/auth.routes.ts` | Auth endpoints |
 | `src/routes/products.routes.ts` | Productos, categorias, sucursales |
+| `src/routes/cart.routes.ts` | Cart CRUD (get, add, update, delete, clear) |
+| `src/routes/orders.routes.ts` | Orders (create, list, detail, cancel) |
 | `src/sync/scheduler.ts` | Cron jobs |
 | `src/sync/products.sync.ts` | Sync productos Odoo → Supabase |
 | `database/schema.sql` | Schema completo de Supabase |

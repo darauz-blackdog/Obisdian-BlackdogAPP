@@ -13,7 +13,7 @@ status: in-progress
 |------|--------|--------|
 | **0** | Setup e infraestructura | COMPLETADA |
 | **1** | Auth + Catalogo | COMPLETADA |
-| **2** | Carrito + Checkout + Pagos | Pendiente |
+| **2** | Carrito + Checkout + Pagos | EN PROGRESO |
 | **3** | Pedidos + Tracking + Push | Pendiente |
 | **4** | Sucursales + Perfil | Pendiente |
 | **5** | QA + Deploy | Pendiente |
@@ -68,17 +68,18 @@ status: in-progress
 
 ---
 
-## Fase 2 — Carrito + Checkout + Pagos — PENDIENTE
+## Fase 2 — Carrito + Checkout + Pagos — EN PROGRESO
 
 ### Objetivo
 Flujo de compra completo end-to-end.
 
 ### Backend
-- [ ] Endpoints de carrito (CRUD items)
-- [ ] Endpoint crear orden (validar stock, crear sale.order en Odoo)
+- [x] Endpoints de carrito (CRUD items)
+- [x] Endpoint crear orden (validar stock, crear sale.order en Odoo)
+- [x] Logica de pago en tienda (orden confirmed)
+- [x] Calculo de delivery fee basico ($3.50 flat)
 - [ ] Integracion Tilopay (crear payment link, webhook)
 - [ ] Integracion Yappy (crear solicitud, webhook)
-- [ ] Logica de pago en tienda (orden draft)
 - [ ] Calculo de delivery fee por zona
 
 ### Flutter
