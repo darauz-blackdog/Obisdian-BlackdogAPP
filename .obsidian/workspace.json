@@ -185,10 +185,15 @@
   },
   "active": "2aed50de413caaa8",
   "lastOpenFiles": [
-    "12 - Hosting e Infraestructura.md",
     "11 - Fases de Desarrollo.md",
-    "13 - Estado Actual del Proyecto.md",
     "09 - Pantallas y Flujo de Usuario.md",
+    "07 - Sistema de Delivery.md",
+    "05 - Sincronización Odoo-Supabase.md",
+    "04 - Integración con Odoo.md",
+    "01 - Visión General y Arquitectura.md",
+    "00 - Índice BlackDog App.md",
+    "13 - Estado Actual del Proyecto.md",
+    "12 - Hosting e Infraestructura.md",
     "06 - Sistema de Pagos.md",
     "02 - Stack Tecnológico.md"
   ]
