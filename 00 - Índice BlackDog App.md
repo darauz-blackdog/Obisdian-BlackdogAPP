@@ -31,6 +31,7 @@ BlackDog App es una **aplicacion movil de e-commerce** (iOS y Android) para la c
 ### Infraestructura
 - [[12 - Hosting e Infraestructura]]
 - [[13 - Estado Actual del Proyecto]]
+- [[14 - Modulo de Compras (Employee App)]]
 
 ---
 
