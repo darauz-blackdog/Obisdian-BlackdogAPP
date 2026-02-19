@@ -117,3 +117,73 @@ Se realizó una auditoría completa de la app BlackDog contra las guías de Mate
 | `lib/screens/auth/register_screen.dart` | 8 tildes |
 | `lib/widgets/fade_in_up.dart` | Curva M3 |
 | `lib/widgets/cart_badge.dart` | ✅ Sin cambios |
+
+---
+
+## Fase 2 — Mejoras Avanzadas M3
+
+### 🔄 Page Transitions (M3 Motion)
+
+| Tipo de pantalla | Transición | Duración |
+|-----------------|-----------|----------|
+| Tabs principales (home, branches, orders, profile) | **Fade-through** | 300ms |
+| Pantallas de detalle (producto, orden, checkout, registro) | **Shared axis Y** (slide-up + fade) | 350ms |
+| Splash → Login | Fade-through | 300ms |
+
+Curvas usadas: `Curves.easeOutCubic` (M3 emphasized deceleration)
+
+### 🌙 Dark Mode
+
+- `ThemeMode.system` — sigue preferencia del sistema automáticamente
+- Colores dark: `#121212` (background), `#1E1E1E` (surface), `#2A2A2A` (surface container)
+- Todos los component themes duplicados para dark (botones, inputs, cards, navigation)
+- `AppColors` ahora incluye constantes `dark*` para ambos temas
+
+### 📱 Responsive Layout
+
+- **< 600dp**: `NavigationBar` (bottom bar) — experiencia móvil estándar
+- **≥ 600dp**: `NavigationRail` (sidebar) — experiencia tablet M3
+- `VerticalDivider` separa rail del contenido
+- Mismos destinos e iconos en ambas configuraciones
+
+### 🎨 Elevation & Surface Tint
+
+- `scrolledUnderElevation: 0.5` + `surfaceTintColor` en AppBar (M3 tonal elevation)
+- Removido `BoxShadow` manual del bottom bar de cart → usa `Theme.of(context).colorScheme.surface`
+- Header glassmorphism de home ahora usa `colorScheme.surface` en vez de `Colors.white`
+- `CardTheme` con `surfaceTintColor: Colors.transparent` para cards uniformes
+
+### 🔤 Typography Scale (M3 Completo)
+
+| Rol | Fuente | Tamaño | Peso |
+|-----|--------|--------|------|
+| Display L/M/S | Montserrat | 57/45/36 | w400 |
+| Headline L/M/S | Montserrat | 32/28/24 | Bold/Bold/w600 |
+| Title L/M/S | Montserrat/Inter | 22/16/14 | w600/w500/w500 |
+| Body L/M/S | Inter | 16/14/12 | Regular |
+| Label L/M/S | Inter | 14/12/11 | w600/w500/w500 |
+
+### 🧩 Component Themes Nuevos
+
+| Theme | Descripción |
+|-------|-------------|
+| `chipTheme` | Background M3, bordes redondeados 20px, sin side |
+| `snackBarTheme` | Floating, bordes 12px |
+| `dividerTheme` | Colores adaptivos light/dark |
+| `navigationBarTheme` | Indicador, iconos, labels con colores diferenciados |
+
+---
+
+## Archivos Fase 2
+
+| Archivo | Cambio |
+|---------|--------|
+| `lib/theme/app_theme.dart` | Rewrite completo: darkTheme, M3 type scale, component themes |
+| `lib/config/routes.dart` | Todas las rutas con `pageBuilder` + transiciones M3 |
+| `lib/screens/common/main_shell.dart` | NavigationRail responsivo para tablets |
+| `lib/main.dart` | `darkTheme` + `ThemeMode.system` |
+| `lib/screens/auth/splash_screen.dart` | 'Panamá' tilde |
+| `lib/screens/health/health_screen.dart` | 'Próximamente' tilde |
+| `lib/screens/cart/cart_screen.dart` | Colores dark-mode-aware |
+| `lib/screens/home/home_screen.dart` | Colores dark-mode-aware |
+
