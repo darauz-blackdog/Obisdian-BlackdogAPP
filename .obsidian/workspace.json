@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "2bdab68186beb5f0",
+        "id": "6950c051b6e0e7fb",
         "type": "tabs",
         "children": [
           {
-            "id": "2aed50de413caaa8",
+            "id": "e4749c10df382f1e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "13 - Estado Actual del Proyecto.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "13 - Estado Actual del Proyecto"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Vista gráfica"
             }
           }
         ]
@@ -44,7 +40,7 @@
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
-              "title": "Files"
+              "title": "Explorador de archivos"
             }
           },
           {
@@ -174,27 +170,29 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Crear nueva base": false
     }
   },
-  "active": "2aed50de413caaa8",
+  "active": "e4749c10df382f1e",
   "lastOpenFiles": [
+    "00 - Índice BlackDog App.md",
+    "05 - Sincronización Odoo-Supabase.md",
+    "04 - Integración con Odoo.md",
+    "06 - Sistema de Pagos.md",
+    "15 - Auditoría M3 (Material Design 3).md",
+    "13 - Estado Actual del Proyecto.md",
+    "14 - Modulo de Compras (Employee App).md",
     "11 - Fases de Desarrollo.md",
     "09 - Pantallas y Flujo de Usuario.md",
     "07 - Sistema de Delivery.md",
-    "05 - Sincronización Odoo-Supabase.md",
-    "04 - Integración con Odoo.md",
     "01 - Visión General y Arquitectura.md",
-    "00 - Índice BlackDog App.md",
-    "13 - Estado Actual del Proyecto.md",
     "12 - Hosting e Infraestructura.md",
-    "06 - Sistema de Pagos.md",
     "02 - Stack Tecnológico.md"
   ]
 }
